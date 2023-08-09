@@ -90,7 +90,9 @@ function login() {
 
             // Push to Firebase Database
             database_ref.child('users/' + user.uid).update(user_data)
-            redirectToAccountPage()
+            setTimeout(() => {
+                redirectToAccountPage()
+            }, 1500);
         })
         .catch(function (error) {
             // Firebase will use this to alert of its errors
