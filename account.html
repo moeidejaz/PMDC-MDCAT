@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="shortcut icon" href="./img/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Online - MDCAT 2023</title>
+</head>
+
+<body>
+
+    <!-- <div class="loading_svg">
+        <img src="/img/Spinner.svg" alt="loading" style="width: 200px;">
+    </div> -->
+
+    <main class="account_page">
+        <div class="account_title">
+
+            <i class="fa-solid fa-bars-staggered"></i>
+
+            <div class="current_user_profile">
+
+                <img src="/img/Spinner_Transparent.svg" alt=""
+                    style="width: 50px; height: 50px; border-radius: 50%;" class="user_img skeleton">
+
+                <div class="current_user_dropdown animate__animated animate__fadeIn hide">
+
+                    <div class="setting_tiles">
+                        <i class="fa-regular fa-user" style="color: #444746;"></i>
+                        <h5>Your Profile</h5>
+                    </div>
+
+                    <div class="setting_tiles">
+                        <i class="fa-regular fa-gear" style="color: #444746;"></i>
+                        <h5>Settings</h5>
+                    </div>
+
+                    <div class="setting_tiles" onclick="logout()">
+                        <i class="fa-regular fa-right-from-bracket" style="color: #444746;"></i>
+                        <h5>Signout</h5>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+
+        <div class="user_data">
+            <div class="user_img1">
+            <img src="/img/Spinner_Transparent.svg" alt="" class="user_profile skeleton" style="width: 120px; height: 120px; border-radius: 50%;">
+            </div>
+            <div class="grid"></div>
+            <p id="user_name"></p>
+            <p id="user_email"></p>
+            <p id="user_login"></p>
+            <label for="profile_img">Profile Picture(square img): </label>
+            <input type="file" id="img" name="profile_img" accept="image/*">
+            <button class="save">SAVE</button>
+
+        </div>
+        <img src="/img/loading-dots.svg" alt="loading" style="width: 70px;" class="loading_dots hide">
+        <p class="upload_notice hide">File uploaded successfully!</p>
+    </main>
+
+    <template id="card-template">
+        <div>
+        <div class="skeleton skeleton-text"></div>
+        <div class="skeleton skeleton-text"></div>
+        <div class="skeleton skeleton-text"></div>
+    </div>
+    </template>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <script src="script.js"></script>
+    <script src="account.js"></script>
+</body>
+
+</html>

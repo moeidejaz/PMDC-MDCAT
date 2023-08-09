@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="./img/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Online - MDCAT 2023</title>
+</head>
+
+<body>
+    <main>
+        <section class="left">
+            <img src="./img/PM-Online_v1.0.png" alt="">
+            <hr>
+            <div class="form-heading">
+                <h2>Pakistan Medical and Dental Council</h2>
+                <h5>(Student Online - MDCAT 2023)</h5>
+            </div>
+
+        </section>
+
+
+        <section class="right">
+            <h2>LOGIN</h2>
+            <h4>Enter your Email and Password For Login</h4>
+
+            <div name="login" class="form">
+
+                <label for="email">Your Email</label>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password">
+
+                <p>Forgot password? <a href="#" class="click-here">Click here</a></p>
+                <p>For FAQ's <a href="#" class="click-here">Click here</a></p>
+
+                <div class="login-div">
+                    <button id="login" onclick="login()" type="submit">LOGIN</button>
+                    <h4 class="deadline">Deadline: 1st April 2024</h4>
+                </div>
+                <h4 class="deadline" id="loginError"></h4>
+                <p class="signup-tag-line" id="tag">Don't have an account? <a href="/signup.html"
+                        class="click-here green-tag">Signup</a>
+                </p>
+
+            </div>
+        </section>
+
+        
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="shortcut icon" href="./img/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Online - MDCAT 2023</title>
+</head>
+
+<body>
+
+    <main>
+        
+        <!-- <img src="/img/icon.svg" alt="" width="150px" class="loading"> -->
+
+        <section class="left">
+            <img src="./img/PM-Online_v1.0.png" alt="">
+            <hr>
+            <div class="form-heading">
+                <h2>Pakistan Medical and Dental Council</h2>
+                <h5>(Student Online - MDCAT 2023)</h5>
+            </div>
+
+        </section>
+
+
+        <section class="right">
+            <h2>Create Your Account</h2>
+            <h4>Empower Your Education. Enroll Today!</h4>
+            <div name="signup" class="form">
+                <!-- action="/success.html" method="POST" data-netlify="true" -->
+                <label for="fullName">Full Name</label>
+                <input type="text" name="fullName" id="fullName" placeholder="Full Name" required>
+
+                <label for="Email">Your Email</label>
+                <input type="email" name="Email" id="email" placeholder="Email" required>
+
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+
+                <p>For FAQ's <a href="#" class="click-here">Click here</a></p>
+
+                <div class="login-div">
+                    <button id="signup" onclick="register()" type="submit">REGISTER</button>
+                    <h4 class="deadline">Deadline: 1st April 2024</h4>
+                </div>
+                <h4 class="deadline" id="signUpError"></h4>
+                <p class="signup-tag-line" id="tag">Already have an account? <a href="/index.html"
+                        class="click-here green-tag">Login</a></p>
+
+            </div>
+            <div class="parent_node">
+                <div id="alert" class="animate__animated animate__slideInUp">
+                    <p>Verification email sent successfully!</p>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

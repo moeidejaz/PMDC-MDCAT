@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #e2e1e170;
+    /* background-color: #FAFAFA; */
+}
+
+main {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2rem;
+    text-align: center;
+    margin: 0rem 14rem 0rem 6rem;
+}
+
+.left img {
+    width: 250px;
+}
+
+.form-heading, h2 {
+    font-size: 22px;
+    margin-bottom: 0.5rem;
+    width: 99%;
+}
+
+.form-heading h5 {
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+hr {
+    width: 70%;
+    margin: 1.25rem 0rem;
+    border: 1px solid #75757524;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+}
+
+.right h4 {
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+.right .form {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    padding: 1rem;
+    border-radius: 5px;
+    line-height: 2.5rem;
+    background-color: #fff;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0rem;
+}
+
+.right .form input {
+    padding: 0.75rem;
+    border: solid 1px #b7b5b588;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.right > .form > input:focus {
+    outline: solid 2px #869fcd;
+}
+
+.click-here {
+    text-decoration: none;
+    color: #000;
+    font-weight: bolder;
+}
+
+.green-tag {
+    color: #38AD63;
+    text-align: center;
+}
+
+.signup-tag-line {
+    text-align: center;
+}
+
+.login-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0rem;
+    width: 90%;
+}
+
+button {
+    border: none;
+    font-family: inherit;
+    background-color: #1E9FAF;
+    padding: 0.5rem 2rem;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+}
+
+.deadline {
+    color: red;
+}
+
+.right > form > input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+/* Signup Page */
+.parent_node {
+    position: relative;
+}
+
+#alert {
+    width: fit-content;
+    height: 50px;
+    padding: 0rem 0.5rem; 
+    border-radius: 10px;
+    background-color: #FFF;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 0; right: 0; 
+    margin-left: auto; 
+    margin-right: auto;     
+    bottom: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+    display: none;
+}
+
+/* account page styles */
+
+.account_page {
+    display: flex;
+    flex-direction: column;
+}
+
+.account_page .user_data span{
+    font-weight: 600;
+    font-style: italic;
+}
+
+.user_data{
+    background-color: #fff;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;    
+    margin: 1.5rem;
+}
+
+.user_data p {
+    margin-top: 0.6rem;
+}
+
+.user_img1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.account_title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.75rem;
+}
+
+i {
+    margin-right: 1rem;
+}
+
+.save {
+    margin-top: 1rem;
+}
+
+/* currently this is commentedd in html' */
+/* .loading_svg {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .loading {
+    position: absolute;
+    left: 0; right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    background-color: #fff;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+    padding: 1.65rem;
+    border-radius: 10px;
+    display: none;
+} */
+
+
+.upload_notice {
+    margin-top: 1rem;
+}
+
+.current_user_profile .user_img {
+    position: relative;
+    aspect-ratio: 4/5;
+}
+
+.current_user_profile .user_img:hover {
+    cursor: pointer;
+}
+
+
+.current_user_dropdown {
+    position: absolute;
+    top: 70px;
+    right: 25px;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0.75rem 0rem;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.setting_tiles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    font-size: 18px;
+    padding: 10px 2.5rem;
+}
+
+.setting_tiles:hover {
+    cursor: pointer;
+    background-color:  hsla(215.29,19.32%,34.51%,7%);
+}
+
+.hide {
+    display: none;
+}
+
+
+/* Skeletion loading */
+.skeleton {
+    opacity: 0.7;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeleton-text {
+    width: 60%;
+    height: 1rem;
+    margin-bottom: .25rem;
+    border-radius: 5px;
+    margin-top: 0.6rem;
+}
+
+.grid div:first-child {
+    width: 20%;
+}
+
+.grid div:nth-child(2) {
+    width: 45%;
+}
+
+.grid div:last-child {
+    width: 75%;
+}
+
+@keyframes skeleton-loading {
+    0% {
+      background-color: hsla(199, 20%, 70%, 0.581);
+    }
+  
+    100% {
+      background-color: hsl(200, 20%, 95%);
+    }
+}
+
+
+@media screen and (max-width: 485px) {
+
+    .right {
+        max-width: 360px;
+    }
+
+    .form-heading h3 {
+        font-size: 17px;
+        margin-bottom: 1rem;
+    }
+
+    .left {
+        margin: 16px 0px 0px 0px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    .left {
+        padding: 0px;
+        margin: 2rem 0rem 4rem 0rem;
+    }
+
+    .form-heading,h2,h4 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .form-heading h3 {
+        margin-bottom: 1rem;
+    }
+
+    .right {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width:1280px) {
+
+    .right form {
+        line-height: 1.75rem;
+    }
+
+    .left {
+        margin: 0rem 6rem 0rem 6rem;
+    }
+
+}
