@@ -270,7 +270,7 @@ i {
 
 /* Skeletion loading */
 .skeleton {
-    opacity: 0.7;
+    opacity: 0.9;
     animation: skeleton-loading 1s linear infinite alternate;
 }
 
