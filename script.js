@@ -179,7 +179,7 @@ function userInitials(fullName) {
     
     let result = fullName.slice(0, 1);
 
-    fetch(`https://ui-avatars.com/api/name=${result}&background=random&color=FFFFFF&rounded=true&bold=true&length=1&size=100`)
+    fetch(`https://ui-avatars.com/api/name=${result}&background=B8E986&color=477B0B&rounded=true&bold=true&length=1&size=100`)
         .then(response => {
             let user_data = {
                 img: response.url
