@@ -18,6 +18,18 @@ firebase.initializeApp(firebaseConfig)
 const auth = firebase.auth()
 const database = firebase.database()
 
+const currentUrl = window.location.href;
+document.addEventListener("keydown" , (e)=> {
+    if(e.key == "Enter"){
+        if(currentUrl.endsWith("index.html") || currentUrl.endsWith("app/")){
+            login()
+        } else {
+            register()
+        }
+    }
+    
+})
+
 function register() {
 
     fullName = document.getElementById("fullName").value
@@ -92,7 +104,7 @@ function login() {
             database_ref.child('users/' + user.uid).update(user_data)
             setTimeout(() => {
                 redirectToAccountPage()
-            }, 1500);
+            }, 500);
         })
         .catch(function (error) {
             // Firebase will use this to alert of its errors
