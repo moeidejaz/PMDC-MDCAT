@@ -19,15 +19,16 @@ const auth = firebase.auth()
 const database = firebase.database()
 
 const currentUrl = window.location.href;
-document.addEventListener("keydown" , (e)=> {
-    if(e.key == "Enter"){
-        if(currentUrl.endsWith("index.html") || currentUrl.endsWith("app/")){
+
+document.addEventListener("keydown", (e) => {
+    if (e.key == "Enter") {
+        if (currentUrl.endsWith("index.html") || currentUrl.endsWith("app/")) {
             login()
         } else {
             register()
         }
     }
-    
+
 })
 
 function register() {
@@ -35,9 +36,11 @@ function register() {
     fullName = document.getElementById("fullName").value
     email = document.getElementById("email").value
     password = document.getElementById("password").value
-
+    const signupBtn = document.getElementById("signup")
 
     validator()
+    signupBtn.style.filter = "brightness(90%)"
+    signupBtn.innerText = "Registering..."
 
     auth.createUserWithEmailAndPassword(email, password)
         .then(function () {
@@ -55,9 +58,9 @@ function register() {
             }
 
             database_ref.child('users/' + user.uid).set(user_data)
-            
+
             // alert("user created!")
-                                   
+
             setTimeout(() => {
                 document.getElementById("alert").style.display = "flex"
             }, 100);
@@ -71,6 +74,8 @@ function register() {
             let error_code = error.code
             let error_message = error.message
 
+            signupBtn.style.filter = "brightness(100%)"
+            signupBtn.innerText = "Register"
             // alert(error_message)
             signUpError.innerHTML = `${error_message}`
 
@@ -79,6 +84,9 @@ function register() {
 
 function login() {
     // Get all our input fields
+
+
+    const loginBtn = document.getElementById("login")
     email = document.getElementById('email').value
     password = document.getElementById('password').value
 
@@ -86,6 +94,9 @@ function login() {
     if (validate_email(email) == false || validate_password(password) == false) {
         // alert('Please Enter valid Email/Password')
     }
+
+    loginBtn.style.filter = "brightness(90%)"
+    loginBtn.innerText = "Signing in..."
 
     auth.signInWithEmailAndPassword(email, password)
         .then(function () {
@@ -112,6 +123,8 @@ function login() {
             var error_message = error.message
 
             // alert(error_message)
+            loginBtn.style.filter = "brightness(100%)"
+            loginBtn.innerText = "Sign in"
             loginError.innerHTML = `${error_message}`
         })
 }
@@ -188,7 +201,7 @@ function userInitials(fullName) {
 
     let user = auth.currentUser
     let database_ref = database.ref()
-    
+
     let result = fullName.slice(0, 1);
 
     fetch(`https://ui-avatars.com/api/name=${result}&background=AB47BC&color=FFFFFF&rounded=true&bold=true&length=1&size=100`)
@@ -196,12 +209,11 @@ function userInitials(fullName) {
             let user_data = {
                 img: response.url
             }
-        
+
             database_ref.child('users/' + user.uid).update(user_data)
         })
-        
-        setTimeout(() => {
-            (window.location.href = '/success.html')
-        }, 1000);
-}
 
+    setTimeout(() => {
+        (window.location.href = '/success.html')
+    }, 1000);
+}
