@@ -97,7 +97,7 @@ function login() {
     if (validate_email(email) == false || validate_password(password) == false) {
         // alert('Please Enter valid Email/Password')
     }
-    loginBtnBtn.style.width = "170px"
+    loginBtn.style.width = "170px"
     loginBtn.style.filter = "brightness(90%)"
     loginBtn.innerText = "Signing in..."
 
