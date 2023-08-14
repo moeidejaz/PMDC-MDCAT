@@ -77,7 +77,6 @@ function register() {
             let error_message = error.message
             // alert(error_message)
             signUpError.innerHTML = `${error_message}`
-            signupBtn.style.width = "120px"
             signupBtn.style.filter = "brightness(100%)"
             signupBtn.innerText = "Sign up"
         })
@@ -125,7 +124,6 @@ function login() {
 
             // alert(error_message)
             loginError.innerHTML = `${error_message}`
-            loginBtn.style.width = "120px"
             loginBtn.style.filter = "brightness(100%)"
             loginBtn.innerText = "Sign in"
         })
