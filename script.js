@@ -40,7 +40,7 @@ function register() {
 
     validator()
 
-    signupBtn.style.width = "170px"
+    // signupBtn.style.width = "170px"
     signupBtn.style.filter = "brightness(90%)"
     signupBtn.innerText = "Signing up..."
 
@@ -75,13 +75,11 @@ function register() {
         .catch(function (error) {
             let error_code = error.code
             let error_message = error.message
-
+            // alert(error_message)
+            signUpError.innerHTML = `${error_message}`
             signupBtn.style.width = "120px"
             signupBtn.style.filter = "brightness(100%)"
             signupBtn.innerText = "Sign up"
-            // alert(error_message)
-            signUpError.innerHTML = `${error_message}`
-
         })
 }
 
@@ -97,7 +95,7 @@ function login() {
     if (validate_email(email) == false || validate_password(password) == false) {
         // alert('Please Enter valid Email/Password')
     }
-    loginBtn.style.width = "170px"
+
     loginBtn.style.filter = "brightness(90%)"
     loginBtn.innerText = "Signing in..."
 
@@ -126,10 +124,10 @@ function login() {
             var error_message = error.message
 
             // alert(error_message)
-            loginBtnBtn.style.width = "120px"
+            loginError.innerHTML = `${error_message}`
+            loginBtn.style.width = "120px"
             loginBtn.style.filter = "brightness(100%)"
             loginBtn.innerText = "Sign in"
-            loginError.innerHTML = `${error_message}`
         })
 }
 
