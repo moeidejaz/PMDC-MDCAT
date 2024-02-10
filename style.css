@@ -31,7 +31,8 @@ main {
     width: 250px;
 }
 
-.form-heading, h2 {
+.form-heading,
+h2 {
     font-size: 22px;
     margin-bottom: 0.5rem;
     width: 99%;
@@ -78,7 +79,7 @@ hr {
     margin-bottom: 1rem;
 }
 
-.right > .form > input:focus {
+.right>.form>input:focus {
     outline: solid 2px #869fcd;
 }
 
@@ -124,7 +125,7 @@ button:hover {
     color: red;
 }
 
-.right > form > input[type=number]::-webkit-inner-spin-button,
+.right>form>input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
@@ -137,14 +138,15 @@ input[type=number]::-webkit-outer-spin-button {
 #alert {
     width: fit-content;
     height: 50px;
-    padding: 0rem 0.5rem; 
+    padding: 0rem 0.5rem;
     border-radius: 10px;
     background-color: #FFF;
     box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
     position: absolute;
-    left: 0; right: 0; 
-    margin-left: auto; 
-    margin-right: auto;     
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     bottom: 35px;
 
     display: flex;
@@ -162,16 +164,16 @@ input[type=number]::-webkit-outer-spin-button {
     flex-direction: column;
 }
 
-.account_page .user_data span{
+.account_page .user_data span {
     font-weight: 600;
     font-style: italic;
 }
 
-.user_data{
+.user_data {
     background-color: #fff;
     box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    padding: 2rem;    
+    padding: 2rem;
     margin: 1.5rem;
 }
 
@@ -260,7 +262,7 @@ i {
 
 .setting_tiles:hover {
     cursor: pointer;
-    background-color:  hsla(215.29,19.32%,34.51%,7%);
+    background-color: hsla(215.29, 19.32%, 34.51%, 7%);
 }
 
 .hide {
@@ -296,11 +298,11 @@ i {
 
 @keyframes skeleton-loading {
     0% {
-      background-color: hsla(199, 20%, 70%, 0.581);
+        background-color: hsla(199, 20%, 70%, 0.581);
     }
-  
+
     100% {
-      background-color: hsl(200, 20%, 95%);
+        background-color: hsl(200, 20%, 95%);
     }
 }
 
@@ -337,7 +339,9 @@ i {
         margin: 2rem 0rem 4rem 0rem;
     }
 
-    .form-heading,h2,h4 {
+    .form-heading,
+    h2,
+    h4 {
         text-align: center;
         width: 100%;
     }
